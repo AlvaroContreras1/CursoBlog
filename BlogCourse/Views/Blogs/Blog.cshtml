@@ -1,0 +1,20 @@
+﻿@model BlogCourse.Models.Blog
+@{
+    ViewBag.Title = "Blog";
+}
+
+<h2 class="Alvaro">@Model.Name</h2>
+
+@if (Model.Posts.Count == 0)
+{
+    <h1>No hay POST dados de alta en este Blog We</h1>
+    <h3>Deseas agregar un nuevo POST a este Blog?</h3>
+}
+
+@foreach(var post in Model.Posts)
+{
+    <h2>@post.Title</h2>
+    <h4>@post.Content</h4>
+
+}
+
